@@ -34,7 +34,7 @@
         <h1>
 <a name="jquery-lazyload-any" class="anchor" href="#jquery-lazyload-any"><span class="octicon octicon-link"></span></a>jQuery-lazyload-any</h1>
 
-<p>This is a jQuery plugin provides a lazyload function for everything.</p>
+<p>This is a jQuery plugin provides a lazyload function for images, iframe or anything.</p>
 
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
@@ -60,8 +60,17 @@
 
 <p>JavaScript</p>
 
-<div class="highlight highlight-JavaScript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#you-want-lazyload'</span><span class="p">).</span><span class="nx">lazyload</span><span class="p">();</span>
+<div class="highlight highlight-JavaScript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#you-want-lazyload'</span><span class="p">).</span><span class="nx">lazyload</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
 </pre></div>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<h4>
+<a name="threshold-number-default-0" class="anchor" href="#threshold-number-default-0"><span class="octicon octicon-link"></span></a><em>threshold: Number (default: <code>0</code>)</em>
+</h4>
+
+<p>Sets the pixels to load earlier. Setting threshold to 200 causes image to load 200 pixels before it appears on viewport. It should be greater or equal zero.</p>
 
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
@@ -78,6 +87,7 @@
 <p>JavaScript</p>
 
 <div class="highlight highlight-JavaScript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'.lazyload'</span><span class="p">).</span><span class="nx">lazyload</span><span class="p">();</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.lazyload'</span><span class="p">).</span><span class="nx">lazyload</span><span class="p">({</span><span class="nx">threshold</span><span class="o">:</span> <span class="mi">200</span><span class="p">});</span>
 </pre></div>
 
 <h2>
