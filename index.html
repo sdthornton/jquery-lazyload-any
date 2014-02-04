@@ -44,7 +44,7 @@
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
 
-<p><a href="http://emn178.github.io/jquery-lazyload-any/demo/images/">Images</a></p>
+<p><a href="http://emn178.github.io/jquery-lazyload-any/samples/images/">Images</a><br><a href="http://emn178.github.io/jquery-lazyload-any/samples/youtube/">Youtube</a></p>
 
 <h2>
 <a name="browser-support" class="anchor" href="#browser-support"><span class="octicon octicon-link"></span></a>Browser Support</h2>
@@ -85,6 +85,12 @@
 
 <p><code>element</code>: The content in lazyload tag will be returned as a jQuery object.</p>
 
+<h4>
+<a name="trigger-string-default-appear" class="anchor" href="#trigger-string-default-appear"><span class="octicon octicon-link"></span></a><em>trigger: <code>String</code> (default: <code>"appear"</code>)</em>
+</h4>
+
+<p>Sets events to trigger lazyload. Default is customized event <code>appear</code>, it will trigger when element appear in screen. You could set other events including each one separated by a space, ex: <code>mousedown touchstart</code>.</p>
+
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
 
@@ -106,7 +112,11 @@
 
   <span class="c1">// Sets the callback function when the load event is firing.</span>
   <span class="c1">// element: The content in lazyload tag will be returned as a jQuery object.</span>
-  <span class="nx">load</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="nx">load</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{},</span>
+
+  <span class="c1">// Sets events to trigger lazyload. Default is customized event `appear`, it will trigger when</span>
+  <span class="c1">// element appear in screen. You could set other events including each one separated by a space.</span>
+  <span class="nx">trigger</span><span class="o">:</span> <span class="s2">"appear"</span>
 <span class="p">});</span>
 </pre></div>
 
