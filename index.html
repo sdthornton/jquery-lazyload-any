@@ -56,7 +56,7 @@
 
 <p>HTML</p>
 
-<div class="highlight highlight-HTML"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"#you-want-lazyload"</span><span class="nt">&gt;</span>
+<div class="highlight highlight-HTML"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"you-want-lazyload"</span><span class="nt">&gt;</span>
   <span class="c">&lt;!--</span>
 <span class="c">    Anything you want to lazyload</span>
 <span class="c">  --&gt;</span>
@@ -91,12 +91,17 @@
 
 <p>Sets events to trigger lazyload. Default is customized event <code>appear</code>, it will trigger when element appear in screen. You could set other events including each one separated by a space, ex: <code>mousedown touchstart</code>.</p>
 
+<h3>
+<a name="notice" class="anchor" href="#notice"><span class="octicon octicon-link"></span></a>Notice</h3>
+
+<p>You should initialize after the element add to page. Or it can't detect whether it's in screen. If you do that, you still can use <code>$(window).trigger('scroll')</code> to force detection.</p>
+
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
 
 <p>HTML</p>
 
-<div class="highlight highlight-HTML"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">".lazyload"</span><span class="nt">&gt;</span>
+<div class="highlight highlight-HTML"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"lazyload"</span><span class="nt">&gt;</span>
   <span class="c">&lt;!--</span>
 <span class="c">    &lt;img src="image.png" /&gt;</span>
 <span class="c">  --&gt;</span>
