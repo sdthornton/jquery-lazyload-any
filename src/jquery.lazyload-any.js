@@ -1,5 +1,5 @@
 /*
- * jQuery-lazyload-any v0.1.6
+ * jQuery-lazyload-any v0.1.8
  * https://github.com/emn178/jquery-lazyload-any
  *
  * Copyright 2014, emn178@gmail.com
@@ -51,11 +51,11 @@
   {
     var element = $(this);
     var options = element.data(KEY);
-    element.off(options.trigger);
+    element.bind(options.trigger);
     var comment = element.contents().filter(function() {
       return this.nodeType === 8;
     }).get(0);
-    var newElement = $(comment && comment.data);
+    var newElement = $(comment && comment.data.trim());
     element.replaceWith(newElement);
 
     if($.isFunction(options.load))
@@ -71,13 +71,13 @@
     var trigger = opts.trigger.split(' ');
     this.data(SELECTOR_KEY, $.inArray(EVENT, trigger) != -1);
     this.data(KEY, opts);
-    this.on(opts.trigger, show);
+    this.bind(opts.trigger, show);
     this.each(test);
   };
 
   $(document).ready(function() {
-    $(window).on('resize', resize);
-    $(window).on('scroll', scroll);
+    $(window).bind('resize', resize);
+    $(window).bind('scroll', scroll);
     resize();
   });
 })(jQuery, window, document);
