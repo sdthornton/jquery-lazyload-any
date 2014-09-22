@@ -17,14 +17,14 @@
     return !!$(element).data(SELECTOR_KEY);
   };
 
-  function test() 
+  function test()
   {
     var element = $(this);
     if(element.is(':visible') && visible(element))
       element.trigger(EVENT);
   }
 
-  function visible(element) 
+  function visible(element)
   {
     var rect = element[0].getBoundingClientRect();
     var x1 = y1 = -element.data(KEY).threshold;
@@ -47,7 +47,7 @@
     $(SELECTOR).each(test);
   }
 
-  function show() 
+  function show()
   {
     var element = $(this);
     var options = element.data(KEY);
@@ -73,11 +73,11 @@
     this.data(KEY, opts);
     this.bind(opts.trigger, show);
     this.each(test);
-  };
 
-  $(document).ready(function() {
-    $(window).bind('resize', resize);
-    $(window).bind('scroll', scroll);
-    resize();
-  });
+    $(document).ready(function() {
+      $(window).bind('resize', resize);
+      $(window).bind('scroll', scroll);
+      resize();
+    });
+  };
 })(jQuery, window, document);
